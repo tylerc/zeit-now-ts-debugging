@@ -1,0 +1,28 @@
+{
+	"name": "zeit-now-ts-debugging",
+	"version": 2,
+	"builds": [
+		{
+			"src": "*.html",
+			"use": "@now/static"
+		},
+		{
+			"src": "*.css",
+			"use": "@now/static"
+		},
+		{
+			"src": "api-handler.ts",
+			"use": "@now/node@canary"
+		},
+		{
+			"src": "zeit/api/api-handler.ts",
+			"use": "@now/node@canary"
+		}
+	],
+	"routes": [
+		{ "src": "/api-working", "dest": "api-handler.ts" },
+		{ "src": "/api-broken", "dest": "zeit/api/api-handler.ts" },
+		{ "handle": "filesystem" }
+	]
+}
+
