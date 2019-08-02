@@ -14,5 +14,8 @@
   "license": "MIT",
   "devDependencies": {
     "@now/node": "^0.12.2"
+  },
+  "dependencies": {
+    "@zeit/node-file-trace": "^0.2.6"
   }
 }
