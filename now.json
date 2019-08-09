@@ -12,16 +12,21 @@
 		},
 		{
 			"src": "api-handler.ts",
-			"use": "@now/node@canary"
+			"use": "@now/node@0.12.5"
 		},
 		{
 			"src": "zeit/api/api-handler.ts",
-			"use": "@now/node@canary"
+			"use": "@now/node@0.12.5"
+		},
+		{
+			"src": "api-handler.tsx",
+			"use": "@now/node@0.12.5"
 		}
 	],
 	"routes": [
 		{ "src": "/api-working", "dest": "api-handler.ts" },
 		{ "src": "/api-broken", "dest": "zeit/api/api-handler.ts" },
+		{ "src": "/api-typescript", "dest": "api-handler.tsx" },
 		{ "handle": "filesystem" }
 	]
 }

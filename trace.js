@@ -1,5 +1,6 @@
 const trace = require('@zeit/node-file-trace');
-const input = 'zeit/api/api-handler.ts';
+//const input = 'zeit/api/api-handler.ts';
+const input = 'api-handler.tsx';
 
 trace([input], {
     base: process.cwd(),
